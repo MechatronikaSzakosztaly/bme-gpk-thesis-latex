@@ -1,0 +1,141 @@
+% !TeX spellcheck = hu_HU
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% TODO Change language to en_GB (recommended) or en_US for English documents
+\documentclass[11pt,a4paper,oneside]{report}             % Single-side (egyoldalas)
+%\documentclass[11pt,a4paper,twoside,openright]{report}  % Duplex (kétoldalas)
+
+
+\input{include/packages}
+
+%TODO Set the main variables
+
+% Szerző
+\newcommand{\gpkszerzoVezeteknev}{Mogi}
+\newcommand{\gpkszerzoKeresztnev}{Róbert}
+\newcommand{\neptun}{NK-ABC123}
+
+% Konzulens 1
+\newcommand{\gpkkonzulensAMegszolitas}{dr.~}
+\newcommand{\gpkkonzulensAVezeteknev}{Konzulens}
+\newcommand{\gpkkonzulensAKeresztnev}{Egy}
+\newcommand{\gpkkonzulensABeosztas}{mestertanár}
+
+% Konzulens 2, a mezők tartalma törölhető
+\newcommand{\gpkkonzulensBMegszolitas}{}
+\newcommand{\gpkkonzulensBVezeteknev}{Konzulens}
+\newcommand{\gpkkonzulensBKeresztnev}{Kettő}
+\newcommand{\gpkkonzulensBBeosztas}{okl. gépészmérnök}
+
+% Konzulens 3, a mezők tartalma üresen hagyható
+\newcommand{\gpkkonzulensCMegszolitas}{}
+\newcommand{\gpkkonzulensCVezeteknev}{}
+\newcommand{\gpkkonzulensCKeresztnev}{}
+\newcommand{\gpkkonzulensCBeosztas}{}
+
+% Témavezető
+\newcommand{\gpktemavezetoMegszolitas}{dr.~}
+\newcommand{\gpktemavezetoVezeteknev}{Témavezető}
+\newcommand{\gpktemavezetoKeresztnev}{Egy}
+\newcommand{\gpktemavezetoBeosztas}{adjunktus}
+
+%TODO -- Title, Faculty, type of thesis 
+\newcommand{\gpkcim}{Kognitív etorobotika} % Cím
+\newcommand{\gpktanszek}{\bmemogi} % Tanszék
+\newcommand{\gpkdoktipus}{\bsc} % Dokumentum típusa (\bsc vagy \msc)
+\newcommand{\gpkdoktipusrag}{\bscrag} % Ragozás (\bscrag vagy \mscrag)
+
+\newcommand{\gpkmunkatipus}{\gpkdoktipus}       % szakdolgozat/diplomaterv
+\newcommand{\gpkmunkatipust}{\gpkmunkatipus\gpkdoktipusrag t}   % tárgyraggal
+\newcommand{\gpkmunkatipusok}{\gpkmunkatipus\gpkdoktipusrag k}  % többesszámban
+
+\input{include/tdk-variables}
+\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev} % egy szerző esetén
+%\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
+
+%TODO Language configuration -- choose one
+% Beállítások magyar nyelvű dolgozathoz
+\input{include/thesis-hu}
+% Settings for English documents
+%\input{include/thesis-en}
+
+\input{include/preamble}
+
+%--------------------------------------------------------------------------------------
+% Table of contents and the main text
+%--------------------------------------------------------------------------------------
+\begin{document}
+
+\pagenumbering{gobble}
+\selectthesislanguage
+
+
+%TODO Titlepage -- choose one from below
+\include{include/titlepage}		   % Szakdolgozat/Diplomaterv címlap
+%\include{include/titlepage-tdk}	% TDK címlap
+%\include{include/titlepage-otdk}   % OTDK címlap
+
+
+% Copyright page
+\include{include/copyrightpage}     % Copytightoldal
+
+
+%TODO Project page -- remove before printing
+\include{include/project}           % Feladatkiírás -- ennek a helyére kell befűzni az
+                                    % aláírt feladatkiírást
+
+
+% Declarations
+\include{include/declaration}       % Nyilatkozatok
+
+
+% Table of Contents
+\tableofcontents\vfill
+
+
+% Abstract -- GPK-n ne használd
+%\include{content/abstract}    
+
+
+% Preface
+\include{content/preface}           % Előszó - GPK sablon szerint
+
+
+% Symbols
+\include{content/symbols}           % Jelölések jegyzéke
+
+
+% The main part of the thesis
+\pagenumbering{arabic}
+%TODO import your own content
+\include{content/introduction}      % Bevezetés
+\include{content/latex-tools}       % 1. fejezet
+\include{content/thesis-format}     % 2. fejezet
+\include{content/template-usage}    % 3. fejezet
+\include{content/summary}           % Összefoglalás
+
+
+% Acknowledgements
+%\include{content/acknowledgement}
+
+
+% Bibliography
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{bib/mybib}
+
+
+% Foreign language summary
+\include{content/summary-foreign}
+
+
+% Appendix
+\include{content/appendices}        % Függelék - opcionális
+
+
+% List of Figures, Tables
+\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}   % Ábrák jegyzéke - opcionális
+\listoftables\addcontentsline{toc}{chapter}{\listtablename}     % Táblázatok jegyzéke - opcionális
+
+
+%\label{page:last}
+\end{document}

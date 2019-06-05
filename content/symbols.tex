@@ -1,0 +1,71 @@
+\newcommand{\tss}{\textsuperscript}     % tss = felső index
+%----------------------------------------------------------------------------
+\chapter*{Jelölések jegyzéke}\addcontentsline{toc}{chapter}{Jelölések jegyzéke}
+%----------------------------------------------------------------------------
+
+A táblázatban a többször előforduló jelölések magyar és angol nyelvű elnevezése, 
+valamint a fizikai mennyiségek esetén annak mértékegysége található. Az egyes 
+mennyiségek jelölése – ahol lehetséges – megegyezik hazai és a nemzetközi 
+szakirodalomban elfogadott jelölésekkel. A ritkán alkalmazott jelölések 
+magyarázata első előfordulási helyüknél található.
+
+%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% A táblázatokat ABC rendben kell feltölteni, először mindig a kisbetűvel kezdve. Ha
+%% egyazon betűjelnek több értelmezése is van, akkor mindegyiket külön sorban kell fel-
+%% tüntetni. Konstansok esetén az értéket is a táblázatba kell írni. Dimenzió nélküli
+%% mennyiségek mértékegysége 1 és nem: – ! A jelölésjegyzékben csak SI vagy SI-n kí-
+%% vüli engedélyezett mértékegységeket szabad feltüntetni. Egy dokumentumon belül az
+%% SI és pl. az angolszász mértékrendszer nem keverhető!
+%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% A Jelölés oszlop alapvetően kurzív betűváltozattal szedendő, a Mértékegység oszlo-
+%% pot álló betűkkel kell szedni. Felső indexhez használható a \tss{} parancs.
+%%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\def\arraystretch{1.5}%  vertical cell padding
+
+\subsection*{Latin betűk}
+\begin{center}
+    \begin{tabular}{lp{10cm}l}
+        \hline
+        \large{Jelölés} & \large{Megnevezés, megjegyzés, érték} & \large{Mértékegység} \\ 
+        \hline
+        $g$     & gravitációs gyorsulás (9.81)  & m/s\tss{2}     \\
+        $p$     & nyomás                        & bar           \\
+        $s$     & fajlagos entrópia             & J/(kg$\cdot$K)\\
+        \hline
+    \end{tabular}    
+\end{center}
+
+
+
+\subsection*{Görög betűk}
+\begin{center}
+    \begin{tabular}{lp{10cm}l}
+        \hline
+        \large{Jelölés} & \large{Megnevezés, megjegyzés, érték} & \large{Mértékegység} \\ 
+        \hline
+        $\eta$  & hatásfok                      & 1             \\      
+        $\rho$  & sűrűség                       & kg/m\tss{3}    \\
+        \hline
+    \end{tabular}
+\end{center}
+
+
+
+\subsection*{Indexek, kitevők}
+\begin{center}
+    \begin{tabular}{lp{12.8cm}}
+        \hline
+        \large{Jelölés} & \large{Megnevezés, értelmezés}\\ 
+        \hline
+        $i$     & általános futóindex (egész szám)  \\
+        nom     & névleges (nominális) érték        \\
+        opt     & legkedvezőbb (optimális) érték    \\
+        \hline
+    \end{tabular}    
+\end{center}
+
+
+\def\arraystretch{1}%  vertical cell padding
