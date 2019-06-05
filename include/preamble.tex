@@ -1,0 +1,146 @@
+%--------------------------------------------------------------------------------------
+% Page layout setup
+%--------------------------------------------------------------------------------------
+% we need to redefine the pagestyle plain
+% another possibility is to use the body of this command without \fancypagestyle
+% and use \pagestyle{fancy} but in that case the special pages
+% (like the ToC, the References, and the Chapter pages)remain in plane style
+
+\pagestyle{plain}
+\marginsize{30mm}{20mm}{20mm}{25mm} % {left}{right}{top}{bottom}, duplexnél fordul
+
+\setcounter{tocdepth}{3}
+%\sectionfont{\large\upshape\bfseries}
+\setcounter{secnumdepth}{3}
+
+\sloppy % Margón túllógó sorok tiltása.
+\widowpenalty=10000 \clubpenalty=10000 %A fattyú- és árvasorok elkerülése
+\def\hyph{-\penalty0\hskip0pt\relax} % Kötőjeles szavak elválasztásának engedélyezése
+
+
+%--------------------------------------------------------------------------------------
+% Setup hyperref package
+%--------------------------------------------------------------------------------------
+\hypersetup{
+    % bookmarks=true,            % show bookmarks bar?
+    unicode=true,              % non-Latin characters in Acrobat's bookmarks
+    pdftitle={\gpkcim},        % title
+    pdfauthor={\szerzoMeta},    % author
+    pdfsubject={\gpkdoktipus}, % subject of the document
+    pdfcreator={\szerzoMeta},   % creator of the document
+    pdfproducer={},    % producer of the document
+    pdfkeywords={},    % list of keywords (separate then by comma)
+    pdfnewwindow=true,         % links in new window
+    colorlinks=true,           % false: boxed links; true: colored links
+    linkcolor=black,           % color of internal links
+    citecolor=black,           % color of links to bibliography
+    filecolor=black,           % color of file links
+    urlcolor=black             % color of external links
+}
+
+
+%--------------------------------------------------------------------------------------
+% Set up listings
+%--------------------------------------------------------------------------------------
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\lstset{
+	basicstyle=\scriptsize\ttfamily, % print whole listing small
+	keywordstyle=\color{black}\bfseries, % bold black keywords
+	identifierstyle=, % nothing happens
+	% default behavior: comments in italic, to change use
+	% commentstyle=\color{green}, % for e.g. green comments
+	stringstyle=\scriptsize,
+	showstringspaces=false, % no special string spaces
+	aboveskip=3pt,
+	belowskip=3pt,
+	backgroundcolor=\color{lightgray},
+	columns=flexible,
+	keepspaces=true,
+	escapeinside={(*@}{@*)},
+	captionpos=b,
+	breaklines=true,
+	frame=single,
+	float=!ht,
+	tabsize=2,
+	literate=*
+		{á}{{\'a}}1	{é}{{\'e}}1	{í}{{\'i}}1	{ó}{{\'o}}1	{ö}{{\"o}}1	{ő}{{\H{o}}}1	{ú}{{\'u}}1	{ü}{{\"u}}1	{ű}{{\H{u}}}1
+		{Á}{{\'A}}1	{É}{{\'E}}1	{Í}{{\'I}}1	{Ó}{{\'O}}1	{Ö}{{\"O}}1	{Ő}{{\H{O}}}1	{Ú}{{\'U}}1	{Ü}{{\"U}}1	{Ű}{{\H{U}}}1
+}
+
+
+%--------------------------------------------------------------------------------------
+% Set up theorem-like environments
+%--------------------------------------------------------------------------------------
+% Using ntheorem package -- see http://www.math.washington.edu/tex-archive/macros/latex/contrib/ntheorem/ntheorem.pdf
+
+\theoremstyle{plain}
+\theoremseparator{.}
+\newtheorem{example}{\pelda}
+
+\theoremseparator{.}
+%\theoremprework{\bigskip\hrule\medskip}
+%\theorempostwork{\hrule\bigskip}
+\theorembodyfont{\upshape}
+\theoremsymbol{{\large \ensuremath{\centerdot}}}
+\newtheorem{definition}{\definicio}
+
+\theoremseparator{.}
+%\theoremprework{\bigskip\hrule\medskip}
+%\theorempostwork{\hrule\bigskip}
+\newtheorem{theorem}{\tetel}
+
+
+%--------------------------------------------------------------------------------------
+% Some new commands and declarations
+%--------------------------------------------------------------------------------------
+\newcommand{\code}[1]{{\upshape\ttfamily\scriptsize\indent #1}}
+\newcommand{\doi}[1]{DOI: \href{http://dx.doi.org/\detokenize{#1}}{\raggedright{\texttt{\detokenize{#1}}}}} % A hivatkozások közt így könnyebb DOI-t megadni.
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+%\DeclareMathOperator*[1]{\floor}{arg\,max}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\rot}{rot}
+
+\makeatletter
+% clearpage but always on an even page
+\newcommand*\clearevenpage{\par
+  \clearpage
+  \if@twoside \ifodd\c@page
+    \null\newpage
+  \fi\fi
+}
+% clearpage but always on an odd page
+\newcommand*\clearoddpage{\par
+  \clearpage
+  \if@twoside \ifodd\c@page \else   % if twoside & page is not odd
+    \null\newpage
+  \fi\fi
+}
+% clear page on singleside, skip an extra page on twoside
+\newcommand{\twosideclearpage}{\par
+    \clearpage
+    \if@twoside
+        \null\newpage
+    \fi
+}
+\makeatother
+
+
+%--------------------------------------------------------------------------------------
+% Setup captions
+%--------------------------------------------------------------------------------------
+\captionsetup[figure]{
+	width=.75\textwidth,
+	aboveskip=10pt}
+
+\renewcommand{\captionlabelfont}{\bf}
+%\renewcommand{\captionfont}{\footnotesize\it}
+
+%--------------------------------------------------------------------------------------
+% Hyphenation exceptions
+%--------------------------------------------------------------------------------------
+\hyphenation{Shakes-peare Mar-seilles ár-víz-tű-rő tü-kör-fú-ró-gép}
+
+
+\author{\gpkszerzo}
+\title{\viktitle}

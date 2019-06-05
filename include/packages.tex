@@ -1,0 +1,64 @@
+% thanks to http://tex.stackexchange.com/a/47579/71109
+\usepackage{ifxetex}
+\usepackage{ifluatex}
+\newif\ifxetexorluatex % a new conditional starts as false
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi>0
+   \xetexorluatextrue
+\fi
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage[lighttt]{lmodern}
+\fi
+
+\usepackage[english,magyar]{babel} % Alapértelmezés szerint utoljára definiált nyelv lesz aktív, de később külön beállítjuk az aktív nyelvet.
+
+%\usepackage{cmap}
+\usepackage{amsfonts,amsmath,amssymb} % Mathematical symbols.
+%\usepackage[ruled,boxed,resetcount,linesnumbered]{algorithm2e} % For pseudocodes. % beware: this is not compatible with LuaLaTeX, see http://tex.stackexchange.com/questions/34814/lualatex-and-algorithm2e
+\usepackage{booktabs} % For publication quality tables for LaTeX
+\usepackage{graphicx}
+
+%\usepackage{fancyhdr}
+%\usepackage{lastpage}
+
+\usepackage{anysize}
+%\usepackage{sectsty}
+\usepackage{setspace} % For setting line spacing
+
+\usepackage[unicode]{hyperref} % For hyperlinks in the generated document.
+\usepackage{xcolor}
+\usepackage{listings} % For source code snippets.
+
+\usepackage[amsmath,thmmarks]{ntheorem} % Theorem-like environments.
+
+\usepackage[hang]{caption}
+
+\singlespacing
+
+\newcommand{\selecthungarian}{
+	\selectlanguage{magyar}
+	\setlength{\parindent}{2em}
+	\setlength{\parskip}{0em}
+	\frenchspacing
+}
+
+\newcommand{\selectenglish}{
+	\selectlanguage{english}
+	\setlength{\parindent}{0em}
+	\setlength{\parskip}{0.5em}
+	\nonfrenchspacing
+	\renewcommand{\figureautorefname}{Figure}
+	\renewcommand{\tableautorefname}{Table}
+	\renewcommand{\partautorefname}{Part}
+	\renewcommand{\chapterautorefname}{Chapter}
+	\renewcommand{\sectionautorefname}{Section}
+	\renewcommand{\subsectionautorefname}{Section}
+	\renewcommand{\subsubsectionautorefname}{Section}
+}
+
+\usepackage[numbers]{natbib}
+\usepackage{xspace}
