@@ -20,7 +20,7 @@ kompatibilitás másodlagos.
 - [ ] TDK címoldal
 
 
-[thesis-template-latex]: (https://github.com/FTSRG/thesis-template-latex)
+[thesis-template-latex]: https://github.com/FTSRG/thesis-template-latex
 [Útmutató]: https://www.gpk.bme.hu/images/gepeszkar/doku/Szabalyzatok/2015/6-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_Utmutato.pdf
 [Word sablon]: https://www.gpk.bme.hu/images/gepeszkar/doku/Szabalyzatok/2015/7-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_SZD_DT_forma_egyoldalas_HUN.docx
 [Overleaf]: https://www.overleaf.com
