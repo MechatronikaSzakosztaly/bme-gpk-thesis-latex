@@ -263,11 +263,11 @@ A diplomatervsablon (a kari irányelvek szerint) az alábbi fő fejezetekből á
 	\item \emph{előszó} (\verb+content/preface.tex+),
 	\item \emph{jelölések jegyzéke} (\verb+content/symbols.tex+),
 	\item \emph{bevezetés} (\verb+content/introduction.tex+) a feladat értelmezése, a tervezés célja, a feladat indokoltsága, a diplomaterv felépítésének rövid összefoglalása ,
-	\item sorszámmal ellátott \emph{fejezetek} (\verb+content/chapter#.tex+) a feladatkiírás pontosítása és részletes elemzése, előzmények (irodalomkutatás, hasonló alkotások), az ezekből levonható következtetések, a tervezés részletes leírása, a döntési lehetőségek értékelése és a választott megoldások indoklása, a megtervezett műszaki alkotás értékelése, kritikai elemzése, továbbfejlesztési lehetőségek, 
-	\item \emph{köszönetnyilvánítások} (opcionális) (\verb+content/acknowledgement.tex+) ha a köszönetnyilvánítás nem az előszóban került elhelyezésre,
+	\item sorszámmal ellátott \emph{fejezetek} (\verb+content/chapter#.tex+) a feladatkiírás pontosítása és részletes elemzése, előzmények (irodalomkutatás, hasonló alkotások), az ezekből levonható következtetések, a tervezés részletes leírása, a döntési lehetőségek értékelése és a választott megoldások indoklása, a megtervezett műszaki alkotás értékelése, kritikai elemzése, továbbfejlesztési lehetőségek,
 	\item részletes és pontos \emph{irodalomjegyzék} (ez a sablon esetében automatikusan generálódik a \verb+thesis.tex+ fájlban elhelyezett \verb+\bibliography+ utasítás hatására, \az+\refstruc{sec:HowtoReference}ban leírtak szerint),
 	\item \emph{illusztrációk és táblázatok jegyzéke} (\verb+thesis.tex+) \verb+\listoffigures+ és \verb+\listoftables+ utasításokkal generálható. Csak szükség esetén használandó, nem ajánlott.
-	\item \emph{függelékek} (\verb+content/appendices.tex+).
+	\item \emph{függelékek} (\verb+content/appendices.tex+),
+	\item \emph{mellékletek} (\verb+content/annexes.tex+).
 \end{enumerate}
 
 A sablonban a fejezetek a \verb+thesis.tex+ fájlba vannak beillesztve \verb+\include+ utasítások segítségével. Lehetőség van arra, hogy csak az éppen szerkesztés alatt álló \verb+.tex+ fájlt fordítsuk le, ezzel lerövidítve a fordítási folyamatot. Ezt a lehetőséget az alábbi kódrészlet biztosítja a \verb+thesis.tex+ fájlban.
