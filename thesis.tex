@@ -128,9 +128,17 @@
 \include{content/summary-foreign}
 
 
+
 % Függelék és mellékletek [Appendices]
-\include{content/appendices}        % Függelék - opcionális
+  
+  % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
+  \let\svaddcontentsline\addcontentsline
+  \renewcommand\addcontentsline[3]{
+    \ifthenelse{\equal{#1}{lof}}{}
+    {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
+
 \include{content/annexes}		        % Mellékletek
+\include{content/appendices}        % Függelék - opcionális
 
 
 % Ábrák és táblázatok jegyzéke [List of Figures, Tables]
