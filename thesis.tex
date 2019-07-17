@@ -45,16 +45,25 @@
 
 %TODO Cím, tanszék, dolgozat típusa [Title, department, document type]
 
-\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó fejlesztése} % Cím [Title]
-\newcommand{\gpktanszek}{\bmemogi} % Tanszék [Department]
+\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó fejlesztése} %TODO Cím [Title]
+\newcommand{\gpktanszek}{\bmemogi} %TODO Tanszék [Department]
 % \bmeatt \bmeara \bmeenergia \bmeepget \bmegtharom \bmemanuf \bmehds \bmemogi \bmemm \bmept
-\newcommand{\gpkdoktipus}{\bsc} % Dokumentum típusa [Document type] (\bsc vagy \msc)
-\newcommand{\gpkdoktipusrag}{\bscrag} % Ragozás (\bscrag vagy \mscrag)
 
+%TODO SZAKDOLGOZAT esetén használandó blokk
+%--------------------------------------------------------------------------------------
+\newcommand{\gpkmunkatipus}{\bsc}     % Dokumentum típusa [Document type]
+\newcommand{\gpkmunkatipusok}{\bsck}  % többesszámban
+\newcommand{\gpkmunkatipusHU}{\gpkmunkatipus}  % Dokumentum típusa HU [Document type]
+\newcommand{\gpkmunkatipustHU}{\bsct}   % tárgyraggal
+%--------------------------------------------------------------------------------------
 
-\newcommand{\gpkmunkatipus}{\gpkdoktipus}       % szakdolgozat/diplomaterv
-\newcommand{\gpkmunkatipust}{\gpkmunkatipus\gpkdoktipusrag t}   % tárgyraggal
-\newcommand{\gpkmunkatipusok}{\gpkmunkatipus\gpkdoktipusrag k}  % többesszámban
+%TODO DIPLOMATERV esetén használandó blokk
+%--------------------------------------------------------------------------------------
+%\newcommand{\gpkmunkatipusHU}{\mscHU}  % Dokumentum típusa HU [Document type]
+%\newcommand{\gpkmunkatipustHU}{\msctHU}% tárgyrakkal  
+%\newcommand{\gpkmunkatipus}{\msc}      % Dokumentum típusa
+%\newcommand{\gpkmunkatipusok}{\msck}   % többesszámban
+%--------------------------------------------------------------------------------------
 
 \input{include/tdk-variables}
 \newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev} % egy szerző esetén
@@ -65,6 +74,7 @@
 \input{include/thesis-hu}
 % Settings for English documents
 %\input{include/thesis-en}
+% Megjegyzés: Nem fordít le mindent automatikusan!
 
 \input{include/preamble}
 
@@ -72,6 +82,7 @@
 %--------------------------------------------------------------------------------------
 % Dokumentum törzse [Document body]
 %--------------------------------------------------------------------------------------
+
 \begin{document}
 
 \pagenumbering{gobble}
