@@ -13,7 +13,7 @@ Jelenlegi kimenet: [`thesis.pdf`]
 Folyamatosan faragom a sablont, érdemes néha visszanézni hogy történt-e változás. Célom, hogy augusztusra készen legyen.
 
 ### Célok
-- [ ] GPK irányelveknek való megfelelés
+- [x] GPK irányelveknek való megfelelés
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
 - [ ] Diplomaterv és Szakdolgozat automatikus kezelése
 - [ ] Angol nyelvű dolgozat támogatása
