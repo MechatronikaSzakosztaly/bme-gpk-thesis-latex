@@ -15,7 +15,7 @@ Folyamatosan faragom a sablont, érdemes néha visszanézni hogy történt-e vá
 ### Célok
 - [x] GPK irányelveknek való megfelelés
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
-- [ ] Diplomaterv és Szakdolgozat automatikus kezelése
+- [x] Diplomaterv és Szakdolgozat automatikus kezelése
 - [ ] Angol nyelvű dolgozat támogatása
 - [ ] TDK címoldal
 
