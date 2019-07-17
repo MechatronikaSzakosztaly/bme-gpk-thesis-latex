@@ -71,9 +71,9 @@
 
 %TODO Nyelv kiválasztása [Language configuration -- choose one]
 % Beállítások magyar nyelvű dolgozathoz
-\input{include/thesis-hu}
+%\input{include/thesis-hu}
 % Settings for English documents
-%\input{include/thesis-en}
+\input{include/thesis-en}
 % Megjegyzés: Nem fordít le mindent automatikusan!
 
 \input{include/preamble}
@@ -87,7 +87,6 @@
 
 \pagenumbering{gobble}
 \selectthesislanguage
-
 
 %TODO Címoldal -- válassz egyet [Titlepage -- choose one from below]
 \include{include/titlepage}		      % Szakdolgozat/Diplomaterv címlap [Thesis]
@@ -125,6 +124,7 @@
 % Jelölések jegyzéke [Table of Symbols]
 \include{content/symbols}
 
+\selectthesislanguage
 
 % Főszöveg [The main part of the thesis]
 \pagenumbering{arabic}
