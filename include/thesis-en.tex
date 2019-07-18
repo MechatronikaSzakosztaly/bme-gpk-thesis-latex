@@ -19,18 +19,19 @@
 \newcommand{\konzulens}{Advisor}
 \newcommand{\temavezeto}{Témavezető (in english)}
 
-\newcommand{\bsc}{Bachelor's Thesis}
-\newcommand{\bsck}{Bachelor's Theses}
-\newcommand{\bsct}{Bachelor's Thesis}
-\newcommand{\bscHU}{Szakdolgozat}
-\newcommand{\bsckHU}{Szakdolgozatok}
-\newcommand{\bsctHU}{Szakdolgozatot}
-\newcommand{\msc}{Master's Thesis}
-\newcommand{\msct}{Master's Thesis}
-\newcommand{\msck}{Master's Theses}
-\newcommand{\mscHU}{Diplomaterv}
-\newcommand{\msckHU}{Diplomatervek}
-\newcommand{\msctHU}{Diplomatervet}
+\newcommand{\selectbsc}{
+  \newcommand{\gpkmunkatipus}{Bachelor's Thesis}  % Dokumentum típusa [Document type]
+  \newcommand{\gpkmunkatipusHU}{Szakdolgozat}     % Dokumentum típusa HU
+  \newcommand{\gpkmunkatipusok}{Bachelor's Theses}% többesszámban
+  \newcommand{\gpkmunkatipustHU}{Szakdolgozatot}  % tárgyraggal
+}
+\newcommand{\selectmsc}{
+  \newcommand{\gpkmunkatipus}{Master's Thesis}    % Dokumentum típusa [Document type]
+  \newcommand{\gpkmunkatipusHU}{Diplomaterv}      % Dokumentum típusa HU
+  \newcommand{\gpkmunkatipusok}{Master's Theses}  % többesszámban
+  \newcommand{\gpkmunkatipustHU}{Diplomatervet}   % tárgyrakkal  
+}
+
 \newcommand{\tdk}{Scientific Students' Association Report}
 \newcommand{\bsconlab}{BSc Project Laboratory}
 \newcommand{\msconlabi}{MSc Project Laboratory 1}

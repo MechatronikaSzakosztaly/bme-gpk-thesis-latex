@@ -1,18 +1,38 @@
 % !TeX spellcheck = hu_HU
 % !TeX encoding = UTF-8
 % !TeX program = pdflatex
+
 % TODO [Change language to en_GB (recommended) or en_US for English documents]
 \documentclass[11pt,a4paper,oneside]{report}             % Egyoldalas [Single-side]
 %\documentclass[11pt,a4paper,twoside,openright]{report}  % Kétoldalas [Duplex]
+
+\input{include/packages}
+
+
+%--------------------------------------------------------------------------------------
+% Dokumentum nyelve [Language]
+%--------------------------------------------------------------------------------------
+
+%TODO Válaszd ki a nyelvet! [Select language]
+\input{include/thesis-hu} % Beállítások magyar nyelvű dolgozathoz
+% \input{include/thesis-en}  % Settings for English documents
+                           %% Megjegyzés: Nem fordít le mindent automatikusan!
+
+
+%--------------------------------------------------------------------------------------
+% Munkatípus [Thesis type]
+%--------------------------------------------------------------------------------------
+
+%TODO Válaszd ki a munkatípust [Select thesis type]
+\selectbsc  % Szakdolgozat [Bachelor's]
+% \selectmsc  % Diplomaterv [Master's]
 
 
 %--------------------------------------------------------------------------------------
 % Változók beállítása [Setting variables]
 %--------------------------------------------------------------------------------------
 
-\input{include/packages}
-
-%TODO Állítsd be az alábbi változókat [Set the main variables]
+%TODO Állítsd be az alábbi változókat [Set these variables]
 
 % Szerző [Author]
 \newcommand{\gpkszerzoVezeteknev}{Mogi}
@@ -43,38 +63,19 @@
 \newcommand{\gpktemavezetoKeresztnev}{Egy}
 \newcommand{\gpktemavezetoBeosztas}{adjunktus}
 
-%TODO Cím, tanszék, dolgozat típusa [Title, department, document type]
+% Dolgozat címe [Thesis title]
+\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó fejlesztése}
 
-\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó fejlesztése} %TODO Cím [Title]
-\newcommand{\gpktanszek}{\bmemogi} %TODO Tanszék [Department]
-% \bmeatt \bmeara \bmeenergia \bmeepget \bmegtharom \bmemanuf \bmehds \bmemogi \bmemm \bmept
+% Tanszék [Department]
+%TODO Válassz az alábbiak közül
+%\bmeatt \bmeara \bmeenergia \bmeepget \bmegtharom \bmemanuf \bmehds \bmemogi \bmemm \bmept
+\newcommand{\gpktanszek}{\bmemogi}  
 
-%TODO SZAKDOLGOZAT esetén használandó blokk [Use this block for BACHELORS THESIS]
-%--------------------------------------------------------------------------------------
-\newcommand{\gpkmunkatipus}{\bsc}     % Dokumentum típusa [Document type]
-\newcommand{\gpkmunkatipusok}{\bsck}  % többesszámban
-\newcommand{\gpkmunkatipusHU}{\gpkmunkatipus}  % Dokumentum típusa HU [Document type]
-\newcommand{\gpkmunkatipustHU}{\bsct}   % tárgyraggal
-%--------------------------------------------------------------------------------------
-
-%TODO DIPLOMATERV esetén használandó blokk [Use this block for BACHELORS THESIS]
-%--------------------------------------------------------------------------------------
-%\newcommand{\gpkmunkatipusHU}{\mscHU}  % Dokumentum típusa HU [Document type]
-%\newcommand{\gpkmunkatipustHU}{\msctHU}% tárgyrakkal  
-%\newcommand{\gpkmunkatipus}{\msc}      % Dokumentum típusa
-%\newcommand{\gpkmunkatipusok}{\msck}   % többesszámban
-%--------------------------------------------------------------------------------------
-
+% TDK
 \input{include/tdk-variables}
 \newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev} % egy szerző esetén
 %\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
 
-%TODO Nyelv kiválasztása [Language configuration -- choose one]
-% Beállítások magyar nyelvű dolgozathoz
-\input{include/thesis-hu}
-% Settings for English documents
-%\input{include/thesis-en}
-% Megjegyzés: Nem fordít le mindent automatikusan!
 
 \input{include/preamble}
 
