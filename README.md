@@ -10,14 +10,21 @@ Kapcsolódó dokumentumok:
 Jelenlegi kimenet: [`thesis.pdf`]
 
 ## Fejlesztés alatt
-Folyamatosan faragom a sablont, érdemes néha visszanézni hogy történt-e változás. Célom, hogy augusztusra készen legyen.
+A sablon Készen áll a használatra, de hibák még előfordulhatnak benne. Amennyiben hibát találtál, vagy észrevételed, javaslatod lenne, nyiss egy _Issue_-t.
 
 ### Célok
 - [x] GPK irányelveknek való megfelelés
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
 - [x] Diplomaterv és Szakdolgozat automatikus kezelése
-- [ ] Angol nyelvű dolgozat támogatása
+- [x] Angol nyelvű dolgozat támogatása
 - [ ] TDK címoldal
+
+## Letöltés
+Az oldal tetején látható `Clone or download` gomb megnyomásával `Download ZIP`
+
+vagy
+
+    $ git clone https://github.com/leventerevesz/bme-gpk-thesis-latex.git
 
 ## Használat
 A használatról a `thesis.pdf` 2. és 4. fejezete ad felvilágosítást. A forrásfájlokat a 4.6 fejezet részletezi.
