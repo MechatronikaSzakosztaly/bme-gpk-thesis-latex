@@ -3,8 +3,15 @@
 % !TeX program = pdflatex
 
 % TODO [Change language to en_GB (recommended) or en_US for English documents]
+
+%--------------------------------------------------------------------------------------
+% Dokumentum formátuma [Document format]
+%--------------------------------------------------------------------------------------
+
+%TODO Válaszd ki, hogy egyoldalas vagy kétoldalas legyen! [Choose format]
 \documentclass[11pt,a4paper,oneside]{report}             % Egyoldalas [Single-side]
 %\documentclass[11pt,a4paper,twoside,openright]{report}  % Kétoldalas [Duplex]
+
 
 \input{include/packages}
 
@@ -20,6 +27,9 @@
 % Megjegyzés: Ez a beállítás az automatikusan létrehozott címek, hivatkozások
 %             nyelvét adja meg, valamint a nyelvre jellemző behúzási távolságot
 %             használja a bekezdések elején.
+%
+%       Note: This setting controls the language of generated titles and citations
+%             moreover the paragraph indentation.
 
 
 %--------------------------------------------------------------------------------------
@@ -67,12 +77,16 @@
 \newcommand{\gpktemavezetoBeosztas}{adjunktus}
 
 % Dolgozat címe [Thesis title]
-\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó fejlesztése}
+\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó tervezése}
 
 % Tanszék [Department]
 %TODO Válassz az alábbiak közül
-%\bmeatt \bmeara \bmeenergia \bmeepget \bmegtharom \bmemanuf \bmehds \bmemogi \bmemm \bmept
-\newcommand{\gpktanszek}{\bmemogi}  
+% \bmeatt    \bmeara  \bmeenergia  \bmeepget  \bmegtharom 
+% \bmemanuf  \bmehds  \bmemogi     \bmemm     \bmept
+\newcommand{\gpktanszek}{\bmemogi}
+
+%TODO Cseréld le a figures/tanszek_logo.pdf fájlt a tanszéked logójára!
+%     [Replace figures/tanszek_logo.pdf with the logo of your department]
 
 % TDK
 \input{include/tdk-variables}

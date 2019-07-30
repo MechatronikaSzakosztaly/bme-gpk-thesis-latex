@@ -274,17 +274,19 @@ A diplomatervsablon (a kari irányelvek szerint) az alábbi fő fejezetekből á
 A sablonban a fejezetek a \verb+thesis.tex+ fájlba vannak beillesztve \verb+\include+ utasítások segítségével. Lehetőség van arra, hogy csak az éppen szerkesztés alatt álló \verb+.tex+ fájlt fordítsuk le, ezzel lerövidítve a fordítási folyamatot. Ezt a lehetőséget az alábbi kódrészlet biztosítja a \verb+thesis.tex+ fájlban.
 \begin{lstlisting}
 \includeonly{
-	guideline,%
-	project,%
 	titlepage,%
+	copyrightpage,%
+	project,%
 	declaration,%
-	abstract,%
+	preface,%
+	symbols,%
 	introduction,%
 	chapter1,%
 	chapter2,%
 	chapter3,%
-	acknowledgement,%
+	summary,%
 	appendices,%
+	annexes,%
 }
 \end{lstlisting}
 
