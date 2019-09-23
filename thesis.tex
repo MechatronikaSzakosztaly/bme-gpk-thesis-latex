@@ -23,7 +23,7 @@
 
 %TODO Válaszd ki a nyelvet! [Select language]
 \input{include/thesis-hu} % Beállítások magyar nyelvű dolgozathoz
-% \input{include/thesis-en}  % Settings for English document
+%\input{include/thesis-en}  % Settings for English document
 
 % Megjegyzés: 
 %         Ez a beállítás az automatikusan létrehozott címek, hivatkozások
@@ -40,8 +40,8 @@
 %--------------------------------------------------------------------------------------
 
 %TODO Válaszd ki a munkatípust [Select thesis type]
-\selectbsc  % Szakdolgozat [Bachelor's]
-% \selectmsc  % Diplomaterv [Master's]
+\selectbsc    % Szakdolgozat [Bachelor's]
+%\selectmsc   % Diplomaterv [Master's]
 
 
 %--------------------------------------------------------------------------------------
@@ -91,6 +91,11 @@
 %TODO Cseréld le a figures/tanszek_logo.pdf fájlt a tanszéked logójára!
 %     [Replace figures/tanszek_logo.pdf with the logo of your department]
 
+% Elzártan kezelendő dolgozat [Restricted access]
+%TODO Töltsd ki a korlátozás lejártának dátumát! 
+%     [Fill in the end date of the restriction]
+\newcommand{\zartkezelesvege}{... év ... hónap ... nap}
+
 % TDK
 \input{include/tdk-variables}
 \newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev} % egy szerző esetén
@@ -110,14 +115,17 @@
 \pagenumbering{gobble}
 \selectthesislanguage
 
-%TODO Címoldal -- válassz egyet [Titlepage -- choose one from below]
+% Címoldal [Titlepage]
+%TODO  Válassz egyet [Choose one from below]
 \include{include/titlepage}         % Szakdolgozat/Diplomaterv címlap [Thesis]
 %\include{include/titlepage-tdk}    % TDK címlap [TDK]
 %\include{include/titlepage-otdk}   % OTDK címlap [OTDK]
 
 
 % Copytightoldal [Copyright page]
-\include{include/copyrightpage}
+%TODO Válaszd ki a megfelelőt! [Choose one]
+\include{include/copyrightpage}               % Nyílt kezelésű [Open access]
+%\include{include/copyrightpage-restricted}   % Elzárt kezelésű [Restricted access]
 
 
 % Feladatkiírás [Project page]
