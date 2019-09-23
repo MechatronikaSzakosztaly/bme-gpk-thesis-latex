@@ -13,6 +13,7 @@
 %\documentclass[11pt,a4paper,twoside,openright]{report}  % Kétoldalas [Duplex]
 
 
+% Csomagok inicializálása [Initializing packages]
 \input{include/packages}
 
 
@@ -24,12 +25,14 @@
 \input{include/thesis-hu} % Beállítások magyar nyelvű dolgozathoz
 % \input{include/thesis-en}  % Settings for English document
 
-% Megjegyzés: Ez a beállítás az automatikusan létrehozott címek, hivatkozások
-%             nyelvét adja meg, valamint a nyelvre jellemző behúzási távolságot
-%             használja a bekezdések elején.
+% Megjegyzés: 
+%         Ez a beállítás az automatikusan létrehozott címek, hivatkozások
+%         nyelvét adja meg, valamint a nyelvre jellemző behúzási távolságot
+%         használja a bekezdések elején.
 %
-%       Note: This setting controls the language of generated titles and citations
-%             moreover the paragraph indentation.
+% Note: 
+%         This setting controls the language of generated titles and citations,
+%         moreover the paragraph indentation.
 
 
 %--------------------------------------------------------------------------------------
@@ -94,6 +97,7 @@
 %\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
 
 
+% Egyedi parancsok és beállítások [Custom commands and settings]
 \input{include/preamble}
 
 
@@ -107,8 +111,8 @@
 \selectthesislanguage
 
 %TODO Címoldal -- válassz egyet [Titlepage -- choose one from below]
-\include{include/titlepage}		      % Szakdolgozat/Diplomaterv címlap [Thesis]
-%\include{include/titlepage-tdk}	  % TDK címlap [TDK]
+\include{include/titlepage}         % Szakdolgozat/Diplomaterv címlap [Thesis]
+%\include{include/titlepage-tdk}    % TDK címlap [TDK]
 %\include{include/titlepage-otdk}   % OTDK címlap [OTDK]
 
 
@@ -130,13 +134,13 @@
 
 
 % Ábrák és táblázatok jegyzéke [List of Figures, Tables]
-%TODO Kommenteld ki, ha használni szeretnéd. 
+%TODO Kommenteld ki, ha használni szeretnéd. [Uncomment to use]
 %\listoffigures\addcontentsline{toc}{chapter}{\listfigurename}   % Ábrák jegyzéke - opcionális
 %\listoftables\addcontentsline{toc}{chapter}{\listtablename}     % Táblázatok jegyzéke - opcionális
 
 
 % Előszó [Preface]
-\include{content/preface}           % GPK sablon szerint
+\include{content/preface}
 
 
 % Jelölések jegyzéke [Table of Symbols]
@@ -144,14 +148,15 @@
 
 \selectthesislanguage
 
+
 % Főszöveg [The main part of the thesis]
 \clearoddpage
 \pagenumbering{arabic}
 %TODO Importáld a saját fejezeteidet [Import your own content]
 \include{content/introduction}      % Bevezetés
-\include{content/latex-tools}       % 1. fejezet
-\include{content/thesis-format}     % 2. fejezet
-\include{content/template-usage}    % 3. fejezet
+\include{content/latex-tools}       % 2. fejezet
+\include{content/thesis-format}     % 3. fejezet
+\include{content/template-usage}    % 4. fejezet
 \include{content/summary}           % Összefoglalás
 
 
@@ -164,7 +169,6 @@
 \include{content/summary-foreign}
 
 
-
 % Függelék és mellékletek [Appendices]
   
   % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
@@ -174,7 +178,7 @@
     {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
 
 \include{content/appendices}        % Függelék - opcionális
-\include{content/annexes}		        % Mellékletek
+\include{content/annexes}           % Mellékletek
 
 
 %\label{page:last}
