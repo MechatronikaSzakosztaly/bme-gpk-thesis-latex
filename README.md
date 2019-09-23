@@ -10,14 +10,14 @@ Kapcsolódó dokumentumok:
 Jelenlegi kimenet: [`thesis.pdf`]
 
 ## Fejlesztés alatt
-A sablon Készen áll a használatra, de hibák még előfordulhatnak benne. Amennyiben hibát találtál, vagy észrevételed, javaslatod lenne, nyiss egy _Issue_-t.
+A sablon készen áll a használatra, de hibák még előfordulhatnak benne. Amennyiben hibát találtál, vagy észrevételed, javaslatod lenne, nyiss egy _Issue_-t.
 
-### Célok
+### Tulajdonságok
 - [x] GPK irányelveknek való megfelelés
+- [x] Egyoldalas és kétoldalas nyomtatás
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
 - [x] Diplomaterv és Szakdolgozat automatikus kezelése
 - [x] Angol nyelvű dolgozat támogatása
-- [ ] TDK címoldal
 
 ## Letöltés
 Az oldal tetején látható `Clone or download` gomb megnyomásával `Download ZIP`
