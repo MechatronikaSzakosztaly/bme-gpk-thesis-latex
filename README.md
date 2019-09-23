@@ -24,14 +24,20 @@ Az oldal tetején látható `Clone or download` gomb megnyomásával `Download Z
 
 vagy
 
-    $ git clone https://github.com/leventerevesz/bme-gpk-thesis-latex.git
+    $ git clone https://github.com/MechatronikaSzakosztaly/bme-gpk-thesis-latex.git
 
 ## Használat
 A használatról a `thesis.pdf` 2. és 4. fejezete ad felvilágosítást. A forrásfájlokat a 4.6 fejezet részletezi.
 
-Mindenképp olvassátok el az [Útmutató]t is!
+Mindenképp olvasd el a tanszéki [Útmutató]t is!
 
-Szerkesztésre az `Overleaf`, Windowson a `TeXStudio`, Ubuntun a `LaTeXila` javasolt. Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
+### Gyorstalpaló
+A fő `.tex` fájl a gyökérmappában található `thesis.tex`. Ebben `%TODO` kommentel vannak jelölve a beállítandó paraméterek.
+
+A saját forrásfájlokat a `content/` mappa tartalmazza, ezeket kell átírni illetve kicserélni a saját tartalomra. A sablon belső fájljai az `include/` mappában vannak, ezeket ideális esetben nem kell módosítanod. A képeket a `figures/` mappába, a bibliográfiát pedig a `bib/` mappába célszerű helyezni.
+
+### Szoftverek
+Szerkesztésre az `Overleaf`, Windowson a `TeXStudio`, Linuxon a `LaTeXila` (GNOME) vagy a `Kile` (KDE) javasolt. Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
 
 
 [thesis-template-latex]: https://github.com/FTSRG/thesis-template-latex
