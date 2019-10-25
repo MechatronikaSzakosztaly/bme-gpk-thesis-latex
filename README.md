@@ -43,6 +43,15 @@ A saját forrásfájlokat a `content/` mappa tartalmazza, ezeket kell átírni i
 Szerkesztésre az `Overleaf`, Windowson a `TeXStudio`, Linuxon a `LaTeXila` (GNOME) vagy a `Kile` (KDE) javasolt. Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
 
 
+### GYIK
+
+#### 1. Hogy állíthatom be, hogy a tartalomjegyzék csak két szint mély legyen?
+Az `include/preamble.tex` fájlban a következő sort kell módosítani:
+
+    \setcounter{tocdepth}{3}
+
+A 0. szint a chapter, az 1. a section, a 2. pedig a subsection.
+
 ## Névjegy
 Révész Levente  
 levente.revesz@gmail.com
