@@ -101,30 +101,6 @@
 \DeclareMathOperator{\sign}{sgn}
 \DeclareMathOperator{\rot}{rot}
 
-\makeatletter
-% clearpage but always on an even page
-\newcommand*\clearevenpage{\par
-  \clearpage
-  \if@twoside \ifodd\c@page
-    \null\newpage
-  \fi\fi
-}
-% clearpage but always on an odd page
-\newcommand*\clearoddpage{\par
-  \clearpage
-  \if@twoside \ifodd\c@page \else   % if twoside & page is not odd
-    \null\newpage
-  \fi\fi
-}
-% clear page on singleside, skip an extra page on twoside
-\newcommand{\twosideclearpage}{\par
-    \clearpage
-    \if@twoside
-        \null\newpage
-    \fi
-}
-\makeatother
-
 
 %--------------------------------------------------------------------------------------
 % Setup captions
