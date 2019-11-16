@@ -53,9 +53,14 @@ Az `include/preamble.tex` fájlban a következő sort kell módosítani:
 A 0. szint a chapter, az 1. a section, a 2. pedig a subsection.
 
 #### 2. A táblázataim / ábráim nagyon elmásznak a helyükről
-Használd a `[htbp]` pozicionálást! A `[h!]` megpróbálja pont oda tenni, de ha ez lehetetlen, akkor feladja. A `[htbp]` megpróbálja oda tenni, aztán egy oldal tetejére, aljára, végül külön oldalra. Az eredmény sokkal jobb lesz.
+Használd a `[htbp]` pozicionálást! A `[h!]` megpróbálja pont oda tenni, de ha ez lehetetlen, akkor feladja. A `[htbp]` megpróbálja oda tenni, aztán egy oldal tetejére, aljára, végül külön oldalra. Az eredmény sokkal jobb lesz. A pozícionálással érdemes a dokumentum elkészülte után foglalkozni.
 
     \begin{table}[htbp]
+
+#### 3. Hogyan hivatkozzak máshonnan szerzett ábrákra?
+A label belsejébe kell tenni a hivatkozást, ehhez azonban a `\protect` parancsra is szükség van.
+    
+    \label{A fluxuskondenzátor működése \protect\cite{DocJegyzetei}}
 
 ## Névjegy
 Révész Levente  
