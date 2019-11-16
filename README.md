@@ -9,12 +9,8 @@ Kapcsolódó dokumentumok:
 
 Jelenlegi kimenet: [`thesis.pdf`]
 
-
-## Fejlesztés alatt
-A sablon készen áll a használatra, de hibák még előfordulhatnak benne. Javaslatokat, észrevételeket a levente.revesz@gmail.com címre küldhetsz.
-
 ### Tulajdonságok
-- [x] GPK irányelveknek való megfelelés
+- [x] GPK irányelveknek megfelel
 - [x] Egyoldalas és kétoldalas nyomtatás
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
 - [x] Diplomaterv és Szakdolgozat automatikus kezelése
