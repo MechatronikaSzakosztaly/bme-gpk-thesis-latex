@@ -40,7 +40,9 @@ A fő `.tex` fájl a gyökérmappában található `thesis.tex`. Ebben `%TODO` k
 A saját forrásfájlokat a `content/` mappa tartalmazza, ezeket kell átírni illetve kicserélni a saját tartalomra. A sablon belső fájljai az `include/` mappában vannak, ezeket ideális esetben nem kell módosítanod. A képeket a `figures/` mappába, a bibliográfiát pedig a `bib/` mappába célszerű helyezni.
 
 ### Szoftverek
-Szerkesztésre az `Overleaf`, Windowson a `TeXStudio`, Linuxon a `LaTeXila` (GNOME) vagy a `Kile` (KDE) javasolt. Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
+Szerkesztésre az Overleaf, Windowson a TeXStudio, Linuxon a LaTeXila (GTK) vagy a Kile (Qt) javasolt. Ha VS Code szerkesztőt használsz, a Latex Workshop kiegészítővel érdemes próbálkoznod.
+
+Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
 
 
 ### GYIK
