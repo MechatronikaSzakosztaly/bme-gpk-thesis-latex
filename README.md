@@ -4,8 +4,8 @@ BME GPK irányelvek szerinti szakdolgozat és diplomaterv sablon.
 A sablon alapja a BME VIK MIT [thesis-template-latex] sablonja.
 
 Kapcsolódó dokumentumok:
-- GPK [Útmutató]
-- GPK [Word sablon]
+- [GPK Útmutató]
+- [GPK Word sablon]
 
 Jelenlegi kimenet: [`thesis.pdf`]
 
