@@ -4,17 +4,13 @@ BME GPK irányelvek szerinti szakdolgozat és diplomaterv sablon.
 A sablon alapja a BME VIK MIT [thesis-template-latex] sablonja.
 
 Kapcsolódó dokumentumok:
-- GPK [Útmutató]
-- GPK [Word sablon]
+- [GPK Útmutató]
+- [GPK Word sablon]
 
 Jelenlegi kimenet: [`thesis.pdf`]
 
-
-## Fejlesztés alatt
-A sablon készen áll a használatra, de hibák még előfordulhatnak benne. Javaslatokat, észrevételeket a levente.revesz@gmail.com címre küldhetsz.
-
 ### Tulajdonságok
-- [x] GPK irányelveknek való megfelelés
+- [x] GPK irányelveknek megfelel
 - [x] Egyoldalas és kétoldalas nyomtatás
 - [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
 - [x] Diplomaterv és Szakdolgozat automatikus kezelése
@@ -40,7 +36,9 @@ A fő `.tex` fájl a gyökérmappában található `thesis.tex`. Ebben `%TODO` k
 A saját forrásfájlokat a `content/` mappa tartalmazza, ezeket kell átírni illetve kicserélni a saját tartalomra. A sablon belső fájljai az `include/` mappában vannak, ezeket ideális esetben nem kell módosítanod. A képeket a `figures/` mappába, a bibliográfiát pedig a `bib/` mappába célszerű helyezni.
 
 ### Szoftverek
-Szerkesztésre az `Overleaf`, Windowson a `TeXStudio`, Linuxon a `LaTeXila` (GNOME) vagy a `Kile` (KDE) javasolt. Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
+Szerkesztésre az Overleaf, Windowson a TeXStudio, Linuxon a LaTeXila (GTK) vagy a Kile (Qt) javasolt. Ha VS Code szerkesztőt használsz, a Latex Workshop kiegészítővel érdemes próbálkoznod.
+
+Fordítók közül a `PDFLaTeX` preferált, de a többi is működik.
 
 
 ### GYIK
@@ -53,9 +51,14 @@ Az `include/preamble.tex` fájlban a következő sort kell módosítani:
 A 0. szint a chapter, az 1. a section, a 2. pedig a subsection.
 
 #### 2. A táblázataim / ábráim nagyon elmásznak a helyükről
-Használd a `[htbp]` pozicionálást! A `[h!]` megpróbálja pont oda tenni, de ha ez lehetetlen, akkor feladja. A `[htbp]` megpróbálja oda tenni, aztán egy oldal tetejére, aljára, végül külön oldalra. Az eredmény sokkal jobb lesz.
+Használd a `[htbp]` pozicionálást! A `[h!]` megpróbálja pont oda tenni, de ha ez lehetetlen, akkor feladja. A `[htbp]` megpróbálja oda tenni, aztán egy oldal tetejére, aljára, végül külön oldalra. Az eredmény sokkal jobb lesz. A pozícionálással érdemes a dokumentum elkészülte után foglalkozni.
 
     \begin{table}[htbp]
+
+#### 3. Hogyan hivatkozzak máshonnan szerzett ábrákra?
+A label belsejébe kell tenni a hivatkozást, ehhez azonban a `\protect` parancsra is szükség van.
+    
+    \label{A fluxuskondenzátor működése \protect\cite{DocJegyzetei}}
 
 ## Névjegy
 Révész Levente  
