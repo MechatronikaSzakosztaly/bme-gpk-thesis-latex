@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/latex,linux,windows
 # Edit at https://www.gitignore.io/?templates=latex,linux,windows
 
+.vscode/
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
