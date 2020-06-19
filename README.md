@@ -66,6 +66,6 @@ levente.revesz@gmail.com
 
 
 [thesis-template-latex]: https://github.com/FTSRG/thesis-template-latex
-[GPK Útmutató]: https://www.gpk.bme.hu/images/gepeszkar/doku/Szabalyzatok/2015/6-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_Utmutato.pdf
-[GPK Word sablon]: https://www.gpk.bme.hu/images/gepeszkar/doku/Szabalyzatok/2015/7-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_SZD_DT_forma_egyoldalas_HUN.docx
+[GPK Útmutató]: https://gpk.bme.hu/downloads/hu/archive/gepeszkar/doku/Szabalyzatok/2015/6-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_Utmutato.pdf
+[GPK Word sablon]: https://gpk.bme.hu/downloads/hu/archive/gepeszkar/doku/Szabalyzatok/2015/7-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_SZD_DT_forma_egyoldalas_HUN.docx
 [`thesis.pdf`]: thesis.pdf
