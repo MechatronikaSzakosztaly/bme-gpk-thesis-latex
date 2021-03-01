@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=latex,linux,windows
 
 .vscode/
+pdf/
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
