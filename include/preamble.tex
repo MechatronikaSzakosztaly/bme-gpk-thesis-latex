@@ -7,37 +7,47 @@
 % (like the ToC, the References, and the Chapter pages)remain in plane style
 
 \pagestyle{plain}
-\marginsize{30mm}{20mm}{20mm}{25mm} % {left}{right}{top}{bottom}, duplexnél fordul
+\geometry{inner=30mm, outer=20mm, top=30mm, bottom=35mm}
 
 \setcounter{tocdepth}{3}
 %\sectionfont{\large\upshape\bfseries}
 \setcounter{secnumdepth}{3}
 
-\sloppy % Margón túllógó sorok tiltása.
-\widowpenalty=10000 \clubpenalty=10000 %A fattyú- és árvasorok elkerülése
-\def\hyph{-\penalty0\hskip0pt\relax} % Kötőjeles szavak elválasztásának engedélyezése
-
+\sloppy                                 % Prevent text from spilling over the margin
+\widowpenalty=10000 \clubpenalty=10000  % Prevent widow and oprhan rows
+\def\hyph{-\penalty0\hskip0pt\relax}    % Enable hyphenation
 
 %--------------------------------------------------------------------------------------
 % Setup hyperref package
 %--------------------------------------------------------------------------------------
 \hypersetup{
     % bookmarks=true,            % show bookmarks bar?
-    unicode=true,              % non-Latin characters in Acrobat's bookmarks
-    pdftitle={\gpkcim},        % title
-    pdfauthor={\szerzoMeta},    % author
-    pdfsubject={\gpkmunkatipus}, % subject of the document
-    pdfcreator={\szerzoMeta},   % creator of the document
-    pdfproducer={},    % producer of the document
-    pdfkeywords={},    % list of keywords (separate then by comma)
-    pdfnewwindow=true,         % links in new window
-    colorlinks=true,           % false: boxed links; true: colored links
-    linkcolor=black,           % color of internal links
-    citecolor=black,           % color of links to bibliography
-    filecolor=black,           % color of file links
-    urlcolor=black             % color of external links
+    unicode=true,                % non-Latin characters in Acrobat's bookmarks
+    pdfnewwindow=true,           % links in new window
+    colorlinks=true,             % false: boxed links; true: colored links
+    linkcolor=black,             % color of internal links
+    citecolor=black,             % color of links to bibliography
+    filecolor=black,             % color of file links
+    urlcolor=black               % color of external links
 }
 
+%--------------------------------------------------------------------------------------
+% Apply variables
+%--------------------------------------------------------------------------------------
+% This command is called in the main tex file and uses variables set there.
+\newcommand{\applyvariables}{
+	\author{\gpkszerzo}
+	\title{\viktitle}
+
+	\hypersetup{
+		pdftitle={\gpkcim},          % title
+		pdfauthor={\szerzoMeta},     % author
+		pdfsubject={\gpkmunkatipus}, % subject of the document
+		pdfkeywords={\keywords},     % list of keywords (separate then by comma)
+		pdfproducer={\szerzoMeta},   % producer of the document (organization)
+		pdfcreator={LaTeX}           % creator of the document (application)
+	}
+}
 
 %--------------------------------------------------------------------------------------
 % Set up listings
@@ -118,5 +128,17 @@
 \hyphenation{Shakes-peare Mar-seilles ár-víz-tű-rő tü-kör-fú-ró-gép}
 
 
-\author{\gpkszerzo}
-\title{\viktitle}
+%--------------------------------------------------------------------------------------
+% Command to exclude tables and images in the annex from the List of Figures/Tables
+%--------------------------------------------------------------------------------------
+\newcommand{\excludefromlocandtoc}{
+	% Redefine \addcontentsline to be silent when printing loc or toc entries
+	\let\svaddcontentsline\addcontentsline
+	\renewcommand\addcontentsline[3]{
+		\ifthenelse{\equal{##1}{lof}}{}{
+			\ifthenelse{\equal{##1}{lot}}{}{
+				\svaddcontentsline{##1}{##2}{##3}
+			}
+		}
+	}
+}

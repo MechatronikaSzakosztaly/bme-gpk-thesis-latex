@@ -13,7 +13,9 @@
 %\documentclass[11pt,a4paper,twoside,openright]{report}  % Kétoldalas [Duplex]
 
 
+%--------------------------------------------------------------------------------------
 % Csomagok inicializálása [Initializing packages]
+%--------------------------------------------------------------------------------------
 \input{include/packages}
 
 
@@ -22,8 +24,8 @@
 %--------------------------------------------------------------------------------------
 
 %TODO Válaszd ki a nyelvet! [Select language]
-\input{include/thesis-hu} % Beállítások magyar nyelvű dolgozathoz
-%\input{include/thesis-en}  % Settings for English document
+\input{include/language-setup-hu.tex} % Beállítások magyar nyelvű dolgozathoz
+%\input{include/language-setup-en}    % Settings for English document
 
 % Megjegyzés: 
 %         Ez a beállítás az automatikusan létrehozott címek, hivatkozások
@@ -33,6 +35,12 @@
 % Note: 
 %         This setting controls the language of generated titles and citations,
 %         moreover the paragraph indentation.
+
+
+%--------------------------------------------------------------------------------------
+% Preambulum (LaTeX beállítások, makrók) [Preamble (LaTeX settings)]
+%--------------------------------------------------------------------------------------
+\input{include/preamble}
 
 
 %--------------------------------------------------------------------------------------
@@ -82,6 +90,9 @@
 % Dolgozat címe [Thesis title]
 \newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó tervezése}
 
+% Kulcsszavak (a PDF-be) [Keywords (to PDF)]
+\newcommand{\keywords}{mechatronika, szabályozástechnika, etorobotika, ipar 4.0}
+
 % Tanszék [Department]
 %TODO Válassz az alábbiak közül
 % \bmeatt    \bmeara  \bmeenergia  \bmeepget  \bmegtharom 
@@ -102,8 +113,8 @@
 %\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
 
 
-% Egyedi parancsok és beállítások [Custom commands and settings]
-\input{include/preamble}
+% Változók beállítása a PDF fájlhoz [Apply variables for the PDF file]
+\applyvariables
 
 
 %--------------------------------------------------------------------------------------
@@ -130,7 +141,7 @@
 
 % Feladatkiírás [Project page]
 %TODO A nyomtatott verzóban ne szerepeljen! [Remove before printing]
-\include{include/project}
+\include{content/project}
 
 
 % Nyilatkozatok [Declarations]
@@ -154,8 +165,6 @@
 % Jelölések jegyzéke [Table of Symbols]
 \include{content/symbols}
 
-\selectthesislanguage
-
 
 % Főszöveg [The main part of the thesis]
 \cleardoublepage
@@ -178,16 +187,9 @@
 
 
 % Függelék és mellékletek [Appendices]
-  
-  % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
-  \let\svaddcontentsline\addcontentsline
-  \renewcommand\addcontentsline[3]{
-    \ifthenelse{\equal{#1}{lof}}{}
-    {\ifthenelse{\equal{#1}{lot}}{}{\svaddcontentsline{#1}{#2}{#3}}}}
+\excludefromlocandtoc % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
 
 \include{content/appendices}        % Függelék - opcionális
 \include{content/annexes}           % Mellékletek
 
-
-%\label{page:last}
 \end{document}

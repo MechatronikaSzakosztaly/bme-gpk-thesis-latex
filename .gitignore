@@ -4,6 +4,7 @@
 
 .vscode/
 pdf/
+thesis.pdf
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
@@ -28,7 +29,6 @@ pdf/
 # *.ps
 # *.eps
 # *.pdf
-thesis.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
