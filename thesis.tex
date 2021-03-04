@@ -18,7 +18,7 @@
 %--------------------------------------------------------------------------------------
 
 %TODO Válaszd ki a nyelvet! [Select language]
-\input{include/language-setup-hu.tex} % Beállítások magyar nyelvű dolgozathoz
+\input{include/language-setup-hu} % Beállítások magyar nyelvű dolgozathoz
 %\input{include/language-setup-en}    % Settings for English document
 
 % Megjegyzés: 
@@ -141,8 +141,9 @@
 % Nyilatkozatok [Declarations]
 \include{include/declaration}
 
-
+\selectthesislanguage
 % Tartalomjegyzék [Table of Contents]
+\setcounter{tocdepth}{3}  % Tartalomjegyzék mélysége [ToC depth]
 \tableofcontents\vfill
 
 

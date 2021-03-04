@@ -47,8 +47,8 @@ test_hu:
 	mv $(DOCUMENT)-lualatex.pdf ./pdf/$(DOCUMENT)-lualatex-hu.pdf
 
 switch_to_english:
-	sed -i "s|^\\\input{include/language-setup-hu}|%\\\input{language-setup/thesis-hu}|" $(DOCUMENT).tex
-	sed -i "s|^%\\\input{include/language-setup-en}|\\\input{language-setup/thesis-en}|" $(DOCUMENT).tex
+	sed -i "s|^\\\input{include/language-setup-hu}|%\\\input{include/language-setup-hu}|" $(DOCUMENT).tex
+	sed -i "s|^%\\\input{include/language-setup-en}|\\\input{include/language-setup-en}|" $(DOCUMENT).tex
 
 test_en:
 	${MAKE} switch_to_english
