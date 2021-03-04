@@ -135,7 +135,7 @@
 
 % Feladatkiírás [Project page]
 %TODO A nyomtatott verzóban ne szerepeljen! [Remove before printing]
-\include{content/project}
+\include{chapters/project}
 
 
 % Nyilatkozatok [Declarations]
@@ -154,22 +154,22 @@
 
 
 % Előszó [Preface]
-\include{content/preface}
+\include{chapters/preface}
 
 
 % Jelölések jegyzéke [Table of Symbols]
-\include{content/symbols}
+\include{chapters/symbols}
 
 
 % Főszöveg [The main part of the thesis]
 \cleardoublepage
 \pagenumbering{arabic}
 %TODO Importáld a saját fejezeteidet [Import your own content]
-\include{content/introduction}      % Bevezetés
-\include{content/latex-tools}       % 2. fejezet
-\include{content/thesis-format}     % 3. fejezet
-\include{content/template-usage}    % 4. fejezet
-\include{content/summary}           % Összefoglalás
+\include{chapters/introduction}      % Bevezetés
+\include{chapters/latex-tools}       % 2. fejezet
+\include{chapters/thesis-format}     % 3. fejezet
+\include{chapters/template-usage}    % 4. fejezet
+\include{chapters/summary}           % Összefoglalás
 
 
 % Bibliográfia [Bibliography]
@@ -178,13 +178,13 @@
 
 
 % Idegen nyelvű (angol) összefoglaló [Foreign language summary]
-\include{content/summary-foreign}
+\include{chapters/summary-foreign}
 
 
 % Függelék és mellékletek [Appendices]
 \excludefromlocandtoc % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
 
-\include{content/appendices}        % Függelék - opcionális
-\include{content/annexes}           % Mellékletek
+\include{chapters/appendices}        % Függelék - opcionális
+\include{chapters/annexes}           % Mellékletek
 
 \end{document}

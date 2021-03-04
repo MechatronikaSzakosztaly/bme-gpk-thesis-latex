@@ -258,39 +258,17 @@ A diplomatervsablon (a kari irányelvek szerint) az alábbi fő fejezetekből á
 	\item \emph{nyilatkozatok} (\verb+include/declaration.tex+),
 	\item \emph{tartalomjegyzék} (\verb+thesis.tex+),
 	\item \emph{illusztrációk és táblázatok jegyzéke} (\verb+thesis.tex+) \verb+\listoffigures+ és \verb+\listoftables+ utasításokkal generálható. Csak szükség esetén használandó, nem ajánlott.
-	\item \emph{előszó} (\verb+content/preface.tex+),
-	\item \emph{jelölések jegyzéke} (\verb+content/symbols.tex+),
-	\item \emph{bevezetés} (\verb+content/introduction.tex+) a feladat értelmezése, a tervezés célja, a feladat indokoltsága, a diplomaterv felépítésének rövid összefoglalása ,
-	\item sorszámmal ellátott \emph{fejezetek} (\verb+content/chapter#.tex+) a feladatkiírás pontosítása és részletes elemzése, előzmények (irodalomkutatás, hasonló alkotások), az ezekből levonható következtetések, a tervezés részletes leírása, a döntési lehetőségek értékelése és a választott megoldások indoklása, a megtervezett műszaki alkotás értékelése, kritikai elemzése, továbbfejlesztési lehetőségek,
+	\item \emph{előszó} (\verb+chapters/preface.tex+),
+	\item \emph{jelölések jegyzéke} (\verb+chapters/symbols.tex+),
+	\item \emph{bevezetés} (\verb+chapters/introduction.tex+) a feladat értelmezése, a tervezés célja, a feladat indokoltsága, a diplomaterv felépítésének rövid összefoglalása,
+	\item sorszámmal ellátott \emph{fejezetek} (\verb+chapters/chapter#.tex+) a feladatkiírás pontosítása és részletes elemzése, előzmények (irodalomkutatás, hasonló alkotások), az ezekből levonható következtetések, a tervezés részletes leírása, a döntési lehetőségek értékelése és a választott megoldások indoklása, a megtervezett műszaki alkotás értékelése, kritikai elemzése, továbbfejlesztési lehetőségek,
 	\item részletes és pontos \emph{irodalomjegyzék} (ez a sablon esetében automatikusan generálódik a \verb+thesis.tex+ fájlban elhelyezett \verb+\bibliography+ utasítás hatására, \az+\refstruc{sec:HowtoReference}ban leírtak szerint),
-	\item \emph{summary} (\verb+content/summary-foreign.tex+) idegen nyelvű összefoglaló,
-	\item \emph{függelékek} (\verb+content/appendices.tex+),
-	\item \emph{mellékletek} (\verb+content/annexes.tex+).
+	\item \emph{summary} (\verb+chapters/summary-foreign.tex+) idegen nyelvű összefoglaló,
+	\item \emph{függelékek} (\verb+chapters/appendices.tex+),
+	\item \emph{mellékletek} (\verb+chapters/annexes.tex+).
 \end{enumerate}
 
-A sablonban a fejezetek a \verb+thesis.tex+ fájlba vannak beillesztve \verb+\include+ utasítások segítségével. Lehetőség van arra, hogy csak az éppen szerkesztés alatt álló \verb+.tex+ fájlt fordítsuk le, ezzel lerövidítve a fordítási folyamatot. Ezt a lehetőséget az alábbi kódrészlet biztosítja a \verb+thesis.tex+ fájlban.
-\begin{lstlisting}
-\includeonly{
-	titlepage,%
-	copyrightpage,%
-	project,%
-	declaration,%
-	preface,%
-	symbols,%
-	introduction,%
-	chapter1,%
-	chapter2,%
-	chapter3,%
-	summary,%
-	appendices,%
-	annexes,%
-}
-\end{lstlisting}
-
-Ha az alábbi kódrészletben az egyes sorokat a \verb+%+ szimbólummal kikommentezzük, akkor a megfelelő \verb+.tex+ fájl nem fordul le. Az oldalszámok és a tartalomjegyék természetesen csak akkor billennek helyre, ha a teljes dokumentumot lefordítjuk.
-
 %----------------------------------------------------------------------------
-\newpage
 \section{Alapadatok megadása}
 %----------------------------------------------------------------------------
 A diplomaterv alapadatait (cím, szerző, konzulens, konzulens titulusa) a \verb+thesis.tex+ fájlban lehet megadni.
