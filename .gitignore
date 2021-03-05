@@ -5,6 +5,7 @@
 .vscode/
 pdf/
 thesis.pdf
+/*.zip
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
