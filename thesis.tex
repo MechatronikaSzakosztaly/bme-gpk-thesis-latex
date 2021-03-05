@@ -53,58 +53,53 @@
 %TODO Állítsd be az alábbi változókat [Set these variables]
 
 % Szerző [Author]
-\newcommand{\gpkszerzoVezeteknev}{Mogi}
-\newcommand{\gpkszerzoKeresztnev}{Róbert}
-\newcommand{\neptun}{ABC123}
+\def\authorFamilyName{Mogi}
+\def\authorGivenName{Róbert}
+\def\neptun{ABC123}
 
 % Konzulens 1 [Consulent 1]
-\newcommand{\gpkkonzulensAMegszolitas}{dr.~}
-\newcommand{\gpkkonzulensAVezeteknev}{Konzulens}
-\newcommand{\gpkkonzulensAKeresztnev}{Egy}
-\newcommand{\gpkkonzulensABeosztas}{mestertanár}
+\def\consulentATitle{dr.~}
+\def\consulentAFamilyName{Konzulens}
+\def\consulentAGivenName{Egy}
+\def\consulentARank{mestertanár}
 
 % Konzulens 2 [Consulent 2], ha nincs hagyd üresen
-\newcommand{\gpkkonzulensBMegszolitas}{}
-\newcommand{\gpkkonzulensBVezeteknev}{Konzulens}
-\newcommand{\gpkkonzulensBKeresztnev}{Kettő}
-\newcommand{\gpkkonzulensBBeosztas}{okl. gépészmérnök}
+\def\consulentBTitle{}
+\def\consulentBFamilyName{Konzulens}
+\def\consulentBGivenName{Kettő}
+\def\consulentBRank{okl. gépészmérnök}
 
 % Konzulens 3 [Consulent 3], ha nincs hagyd üresen 
-\newcommand{\gpkkonzulensCMegszolitas}{}
-\newcommand{\gpkkonzulensCVezeteknev}{}
-\newcommand{\gpkkonzulensCKeresztnev}{}
-\newcommand{\gpkkonzulensCBeosztas}{}
+\def\consulentCTitle{}
+\def\consulentCFamilyName{}
+\def\consulentCGivenName{}
+\def\consulentCRank{}
 
 % Témavezető
-\newcommand{\gpktemavezetoMegszolitas}{dr.~}
-\newcommand{\gpktemavezetoVezeteknev}{Témavezető}
-\newcommand{\gpktemavezetoKeresztnev}{Egy}
-\newcommand{\gpktemavezetoBeosztas}{adjunktus}
+\def\supervisorTitle{dr.~}
+\def\supervisorFamilyName{Témavezető}
+\def\supervisorGivenName{Egy}
+\def\supervisorRank{adjunktus}
 
 % Dolgozat címe [Thesis title]
-\newcommand{\gpkcim}{Gazdájához kötődő PID-szabályozó tervezése}
+\def\thesisTitle{Gazdájához kötődő PID-szabályozó tervezése}
 
 % Kulcsszavak (a PDF-be) [Keywords (to PDF)]
-\newcommand{\keywords}{mechatronika, szabályozástechnika, etorobotika, ipar 4.0}
+\def\keywords{mechatronika, szabályozástechnika, etorobotika, ipar 4.0}
 
 % Tanszék [Department]
 %TODO Válassz az alábbiak közül
 % \bmeatt    \bmeara  \bmeenergia  \bmeepget  \bmegtharom 
 % \bmemanuf  \bmehds  \bmemogi     \bmemm     \bmept
-\newcommand{\gpktanszek}{\bmemogi}
+\def\department{\bmemogi}
 
-%TODO Cseréld le a figures/tanszek_logo.* fájlt a tanszéked logójára!
-%     [Replace figures/tanszek_logo.* with the logo of your department]
+%TODO Cseréld le a figures/tanszek_logo.pdf képet a tanszéked logójára!
+%     [Replace figures/tanszek_logo.pdf with the logo of your department]
 
 % Elzártan kezelendő dolgozat [Restricted access]
 %TODO Töltsd ki a korlátozás lejártának dátumát! 
 %     [Fill in the end date of the restriction]
-\newcommand{\zartkezelesvege}{... év ... hónap ... nap}
-
-% TDK
-\input{include/tdk-variables}
-\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev} % egy szerző esetén
-%\newcommand{\szerzoMeta}{\gpkszerzoVezeteknev{} \gpkszerzoKeresztnev, \tdkszerzoB} % két szerző esetén
+\def\endOfRestrictedAccess{... év ... hónap ... nap}
 
 
 % Változók beállítása a PDF fájlhoz [Apply variables for the PDF file]
@@ -121,10 +116,7 @@
 \selectthesislanguage
 
 % Címoldal [Titlepage]
-%TODO  Válassz egyet [Choose one from below]
 \include{include/titlepage-thesis}  % Szakdolgozat/Diplomaterv címlap [Thesis]
-%\include{include/titlepage-tdk}    % TDK címlap [TDK]
-%\include{include/titlepage-otdk}   % OTDK címlap [OTDK]
 
 
 % Copytightoldal [Copyright page]
