@@ -14,7 +14,9 @@
 % Text and paragraph styling
 %--------------------------------------------------------------------------------------
 
-%\sectionfont{\large\upshape\bfseries}  % Section title font
+\sectionfont{\Large\upshape\bfseries}  % Section title font
+\subsectionfont{\Large\itshape\mdseries}
+\subsubsectionfont{\large\itshape\mdseries}
 \setcounter{secnumdepth}{3}             % Section numbering depth
 
 \sloppy                                 % Prevent text from spilling over the margin
@@ -59,14 +61,14 @@
 % This command is called in the main tex file and uses variables set there.
 \newcommand{\applyvariables}{
 	\author{\authorName}
-	\title{\gpktitle}
+	\title{\thesisTitle}
 
 	\hypersetup{
-		pdftitle={\thesisTitle},          % title
-		pdfauthor={\authorName},         % author
+		pdftitle={\thesisTitle},     % title
+		pdfauthor={\authorName},     % author
 		pdfsubject={\gpkmunkatipus}, % subject of the document
 		pdfkeywords={\keywords},     % list of keywords (separate then by comma)
-		pdfproducer={\authorName},       % producer of the document (organization)
+		pdfproducer={\authorName},   % producer of the document (organization)
 		pdfcreator={LaTeX}           % creator of the document (application)
 	}
 }
