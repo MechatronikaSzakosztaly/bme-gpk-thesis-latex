@@ -7,7 +7,7 @@
 % (like the ToC, the References, and the Chapter pages)remain in plane style
 
 \pagestyle{plain}
-\geometry{inner=30mm, outer=20mm, top=30mm, bottom=35mm}
+\geometry{inner=30mm, outer=20mm, top=20mm, bottom=30mm}
 
 
 %--------------------------------------------------------------------------------------
@@ -23,13 +23,13 @@
 \widowpenalty=10000 \clubpenalty=10000  % Prevent widow and oprhan rows
 \def\hyph{-\penalty0\hskip0pt\relax}    % Enable hyphenation
 
-\singlespacing							% 1x Line spacing
+\onehalfspacing                         % 1x Line spacing
 
 % Text setup for Hungarian text
 \newcommand{\selecthungarian}{
 	\selectlanguage{magyar}
 	\setlength{\parindent}{2em}			% Paragraph indentation
-	\setlength{\parskip}{3pt}			% Paragraph spacing
+	\setlength{\parskip}{5pt}			% Paragraph spacing
 	\frenchspacing
 }
 
@@ -37,7 +37,7 @@
 \newcommand{\selectenglish}{
 	\selectlanguage{english}
 	\setlength{\parindent}{0em}
-	\setlength{\parskip}{0.5em}
+	\setlength{\parskip}{8pt}
 	\nonfrenchspacing
 }
 
