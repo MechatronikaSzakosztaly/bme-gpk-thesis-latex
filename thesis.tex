@@ -166,7 +166,10 @@
 
 % Bibliográfia [Bibliography]
 \addcontentsline{toc}{chapter}{\bibname}
-\bibliography{bib/mybib}
+{
+    \footnotesize  % Kisebb betűméret [Smaller font size]
+    \bibliography{bib/mybib}
+}
 
 
 % Idegen nyelvű (angol) összefoglaló [Foreign language summary]
@@ -174,7 +177,8 @@
 
 
 % Függelék és mellékletek [Appendices]
-\excludefromlocandtoc % Az ábrákat és a táblázatokat hagyja ki a jegyzékből
+\excludeFromLocAndLot % A következő ábrákat és a táblázatokat hagyja ki a jegyzékből
+                      % [Exclude following figures and tables from List Of Figures/Tables]
 
 \include{chapters/appendices}        % Függelék - opcionális
 \include{chapters/annexes}           % Mellékletek
