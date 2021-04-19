@@ -65,9 +65,9 @@ Használd a `[htbp]` pozicionálást! A `[h!]` megpróbálja pont oda tenni, de 
 
 #### 3. Hogyan hivatkozzak máshonnan szerzett ábrákra?
 
-A label belsejébe kell tenni a hivatkozást, ehhez azonban a `\protect` parancsra is szükség van.
+A caption belsejébe kell tenni a hivatkozást, ehhez azonban a `\protect` parancsra is szükség van.
 
-    \label{A fluxuskondenzátor működése \protect\cite{DocJegyzetei}}
+    \caption{A fluxuskondenzátor működése \protect\cite{DocJegyzetei}}
 
 ## Névjegy
 
