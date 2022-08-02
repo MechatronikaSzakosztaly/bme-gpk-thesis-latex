@@ -9,19 +9,19 @@ Kapcsolódó dokumentumok:
 - [GPK Útmutató]
 - [GPK Word sablon]
 
-Jelenlegi kimenet: [`thesis.pdf`]
+Jelenlegi kimenet: [thesis.pdf]
 
 ### Tulajdonságok
 
 - [x] GPK irányelveknek megfelel
 - [x] Egyoldalas és kétoldalas nyomtatás
-- [x] `XeLaTeX`, `PDFLaTeX` és `LuaLaTeX` kompatibilitás
+- [x] XeLaTeX, PDFLaTeX és LuaLaTeX kompatibilitás
 - [x] Diplomaterv és Szakdolgozat automatikus kezelése
 - [x] Angol nyelvű dolgozat támogatása
 
 ## Letöltés
 
-A Releases oldalon töltsd le a lefrissebb kiadás ZIP archívumát (`thesis.zip`)
+A Releases oldalról töltsd le a legfrissebb kiadás ZIP archívumát (thesis.zip)
 
 vagy
 
@@ -29,7 +29,7 @@ vagy
 
 ## Használat
 
-A használatról a `thesis.pdf` 2. és 4. fejezete ad felvilágosítást. A forrásfájlokat a 4.6 fejezet részletezi.
+A használatról a [thesis.pdf] 2. és 4. fejezete ad felvilágosítást. A forrásfájlokat a 4.6 fejezet részletezi.
 
 Mindenképp olvasd el a [GPK Útmutató]t is, ugyanis a dolgozat pontos formai követelményeit abban találod!
 
@@ -45,7 +45,7 @@ Az ajánlott TeX disztribúció Windows-on a MikTeX, Linuxon a TeX Live. A telep
 
 Szerkesztésre az Overleaf, Windowson a TeXStudio, Linuxon a LaTeXila (GTK) vagy a Kile (Qt) javasolt. A VS Code a Latex Workshop kiegészítővel is egy kényelmes környezet.
 
-Fordítók közül a `PDFLaTeX` `XeLaTeX` és `LuaLaTeX` közül bármelyiket használhatod.
+Fordítók közül a PDFLaTeX, XeLaTeX és LuaLaTeX bármelyikét használhatod.
 
 ### GYIK
 
@@ -77,4 +77,4 @@ levente.revesz@gmail.com
 [thesis-template-latex]: https://github.com/FTSRG/thesis-template-latex
 [GPK Útmutató]: https://gpk.bme.hu/downloads/hu/archive/gepeszkar/doku/Szabalyzatok/2015/6-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_Utmutato.pdf
 [GPK Word sablon]: https://gpk.bme.hu/downloads/hu/archive/gepeszkar/doku/Szabalyzatok/2015/7-melleklet(SZD&DT&ZV&SZGY_Szabalyzat)_SZD_DT_forma_egyoldalas_HUN.docx
-[`thesis.pdf`]: https://github.com/MechatronikaSzakosztaly/bme-gpk-thesis-latex/releases/download/v1.0.99/template.zip
+[thesis.pdf]: https://github.com/MechatronikaSzakosztaly/bme-gpk-thesis-latex/releases/download/v1.1/thesis_hu.pdf
